@@ -20,13 +20,13 @@ Route::get('/menu', function(){
     return view('menu',['menuslist' => Menuslist::all() ]);
 })->middleware(['auth', 'verified'])->name('menu');
 
-Route::get('/menu/{slug}', function($slug){
+// Route::get('/menus/{slug}', function($slug){
     
-        $list = Menuslist::find($slug);
+//         $list = Menuslist::find($slug);
 
-        return view('detail', ['menuslist' => $list]);
+//         return view('detail', ['menuslist' => $list]);
 
-})->middleware(['auth', 'verified'])->name('menu');
+// })->middleware(['auth', 'verified'])->name('menu');
 
 Route::get('/about', function(){
     return view('about');
